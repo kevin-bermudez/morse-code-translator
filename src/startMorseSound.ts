@@ -15,9 +15,8 @@ export const startMorseSound = (morseContent:string,callback:CallableFunction) =
         if(symbol === '-'){
           finalTime = generateStripeSound(finalTime)
         }
-        if(quantitySymbols % 2 === 0 && quantitySymbols !== 1 && elementArray.length - 1 > index){
-          finalTime = generateSymbolSilence(finalTime);
-        }
+        
+        finalTime = generateSymbolSilence(finalTime);
       })
 
       if(elementArray.length - 1 > index){
